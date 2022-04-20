@@ -7,6 +7,9 @@
 - Sqlite3
 - Bootstrap
 
+## Схема данных
+[db architecture](https://github.com/Yakov-Varnaev/GeekLib.git)
+
 ## Страницы
 
 ### Главная страница
