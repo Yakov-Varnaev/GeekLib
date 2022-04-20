@@ -8,7 +8,7 @@
 - Bootstrap
 
 ## Схема данных
-![db architecture](https://github.com/Yakov-Varnaev/GeekLib.git/docs/GeekLib.png?raw=true)
+![db architecture](./docs/GeekLib.png?raw=true)
 
 ## Страницы
 
