@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <aside class="col-lg-4">
+      <div class="">
+        {% block aside %}
+        {% endblock aside %}
+      </div>
+    </aside>
+    <section class="col-lg-8">
+      {% block section_content %}
+        {% for book in books %}
+          {% include 'books/book_card.html' %}
+        {% endfor %}
+      {% endblock section_content %}
+    </section>
+  </div>
+</div>
+{% endblock content %}

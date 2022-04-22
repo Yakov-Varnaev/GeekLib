@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'forms.css' %}"/>
+{% endblock head %}
+
+{% block content %}
+<div class="center-wrapper container">
+  <div class="row col-md-4 align-items-center">
+    <div class="col">
+      <form class="p-2 rounded border border-dark" method="post" action={% url 'login' %}>
+        {% csrf_token %}
+        {% include 'default_form_fields.html' %}
+        <button type="submit" class="btn btn-dark mt-2 bg-custom-gradient">Login</button>
+      </form>
+      <div class="text-muted d-flex flex-column align-items-center">
+        <span>Or 
+            <a class="badge badge-secondary" href="{% url 'login' %}">login</a>
+      </span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

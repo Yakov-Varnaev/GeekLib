@@ -10,6 +10,9 @@ class PublishsingHouse(models.Model):
 
     name = models.CharField('publising house name', max_length=255)
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Book(models.Model):
 
@@ -27,3 +30,6 @@ class Book(models.Model):
         related_name='books',
         verbose_name='Publisher'
     )
+
+    def __str__(self) -> str:
+        return self.name

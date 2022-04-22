@@ -1,0 +1,22 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand text-gradient" href={% url 'books:books-list' %}>GeekLib</a>
+    <ul class="navbar-nav">
+      {% if user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href={% url 'users:profile' pk=user.id %}>{{ user.username }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-danger" href={% url 'users:logout' %}>Logout</a>
+        </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'users:login' %}>Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={% url 'users:signup' %}>Signup</a>
+          </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="offset-3">
+      {% for book in books %}
+        {% include 'books/book_card.html' %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

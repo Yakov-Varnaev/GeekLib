@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load user_filters %}
+
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-5 p-5">
+      <div class="card bg-dark text-light">
+        <div class="card-header">Зарегистрироваться</div>
+          <div class="card-body">
+              <form method="post" action="{% url 'users:signup' %}">
+              {% csrf_token %
+              {% for field in form %} 
+                <div class="form-group row my-3 mx-1">
+                  <label for="{{ field.id_for_label }}">
+                    {{ field.label }}
+                      {% if field.field.required %}
+                        <span class="required text-danger">*</span>
+                      {% endif %}
+                  </label>
+                  {{ field|addclass:'form-control bg-secondary text-light border-0' }} 
+                </div>
+              {% endfor %}
+              <div class="col-md-4 offset-md-4 d-flex flex-column">
+                <button type="submit" class="btn btn-primary bg-custom-gradient">
+                  Signup
+                </button>
+              </div>
+              </form>
+          </div> <!-- card body -->
+        </div> <!-- card -->
+      </div> <!-- col -->
+  </div> <!-- row -->
+{% endblock %}

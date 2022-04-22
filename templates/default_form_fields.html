@@ -1,0 +1,8 @@
+{% load user_filters %}
+
+{% for field in form %}
+  <div>
+    <label>{{ field.label }}</label>
+    {{ field|addclass:"form-control bg-dark text-light border-0" }}
+  </div>
+{% endfor %}

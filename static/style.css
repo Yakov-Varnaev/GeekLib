@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    font-family: 'Roboto';
+}
+
+.navbar-brand h3 {
+    font-weight: 800;
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(245deg, #6100a4, #00d4ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-custom-gradient {
+    background: linear-gradient(245deg, #6100a4, #00d4ff);
+    border-width: 0;
+}
