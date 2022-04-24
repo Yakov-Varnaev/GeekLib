@@ -17,7 +17,9 @@ class LibraryBookDetail(DetailView):
         context['book'] = self.object.book
         context['form'] = RentForm(self.request.POST or None)
         if self.request.user.is_authenticated:
-            context['is_rented'] = BookRent.objects.filter(book=self.object, tenant=self.request.user).exists()
+            context['is_rented'] = BookRent.objects.filter(
+                book=self.object, tenant=self.request.user
+            ).exists()
         return context
 
     def post(self, request, pk, **kwargs):

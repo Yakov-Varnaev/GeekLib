@@ -3,7 +3,6 @@ from django.urls import reverse
 
 
 class PublishsingHouse(models.Model):
-    
     class Meta:
         verbose_name = 'Publishing House'
         verbose_name_plural = 'Publishing Houses'

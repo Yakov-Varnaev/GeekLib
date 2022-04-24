@@ -8,5 +8,5 @@ class RentForm(forms.ModelForm):
         model = BookRent
         fields = ('to_date',)
         widgets = {
-            'to_date': forms.DateInput(attrs={'type':'date'})
+            'to_date': forms.DateInput(attrs={'type': 'date'})
         }

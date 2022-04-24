@@ -16,4 +16,3 @@ class TenantsInline(admin.TabularInline):
 class LibraryBookAdmin(admin.ModelAdmin):
     list_display = ('id', 'book', 'library')
     inlines = (TenantsInline,)
-    

@@ -1,4 +1,3 @@
-from django.db.models import Q, Exists
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView
 
@@ -10,7 +9,7 @@ from .models import Book, PublishsingHouse
 class BooksListView(ListView):
     model = Book
     context_object_name = 'books'
-    template_name='books/index.html'
+    template_name = 'books/index.html'
     paginate_by = 10
 
 
@@ -34,7 +33,9 @@ class PublisherView(ListView):
     paginate_by = 10
 
     def get_queryset(self, **kwargs):
-        self.publisher = get_object_or_404(PublishsingHouse, id=self.kwargs.get('pk'))
+        self.publisher = get_object_or_404(
+            PublishsingHouse, id=self.kwargs.get('pk')
+        )
         return self.publisher.books.all()
 
     def get_context_data(self, **kwargs):
