@@ -1,9 +1,11 @@
 {% extends 'column_layout.html' %}
 
-{% block aside %}
-  {{ user.username }}
-{% endblock aside %}
+{% block aside_header %}
+  {{ profile }}
+{% endblock aside_header %}
 
 {% block section_content %}
-  section content
+  {% for rent in books %}
+    {% include 'users/book_card.html' with book=rent.book.book %}
+  {% endfor %}
 {% endblock section_content %}

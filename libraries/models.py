@@ -67,3 +67,6 @@ class BookRent(models.Model):
         verbose_name='tenant'
     )
     to_date = models.DateField('Rent Expiration Date')
+
+    def __str__(self) -> str:
+        return self.book.book.name

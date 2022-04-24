@@ -3,6 +3,7 @@
 {% block content %}
 <div class="center-wrapper container">
   <div class="card bg-dark col-7">
+    {% block card_content %}
     {% block plate_header %}
       <div class="card-header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
@@ -34,6 +35,7 @@
         </div>
       </div>
     {% endblock plate_footer %}
+    {% endblock card_content %}
   </div>
 </div>
 {% endblock content %}

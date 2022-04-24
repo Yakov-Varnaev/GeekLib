@@ -1,8 +1,8 @@
 from readline import insert_text
 from urllib import request
 from django.shortcuts import get_object_or_404, redirect, render
-from django.urls import reverse
-from django.views.generic import DetailView
+from django.urls import reverse, reverse_lazy
+from django.views.generic import DetailView, DeleteView
 
 from libraries.forms import RentForm
 
@@ -31,3 +31,8 @@ class LibraryBookDetail(DetailView):
             instance.book = book
             instance.save()
         return redirect(reverse('libraries:books-detail', args=[pk]))
+
+
+class BookRentDelete(DeleteView):
+    model = BookRent
+    success_url = reverse_lazy('books:books-list')

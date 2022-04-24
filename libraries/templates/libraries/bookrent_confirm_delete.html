@@ -1,0 +1,10 @@
+{% extends 'plate_layout.html' %}
+
+{% block card_content %}
+  <form method="post">{% csrf_token %}
+    <p>Are you sure you want to return book "{{ object }}"?</p>
+    <button type="submit" class="btn bg-custom-gradient text-light">
+      Confirm
+    </button>
+  </form>
+{% endblock card_content %}

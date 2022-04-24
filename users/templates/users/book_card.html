@@ -1,0 +1,12 @@
+{% extends 'books/book_card.html' %}
+
+{% block book_card_footer %}
+  <div class="d-flex align-items-center justify-content-between">
+    {{ rent.to_date }}
+    <form action={% url 'libraries:book-return' rent.id %} method="delete">
+      <button type="submit" class="btn btn-danger">
+        Return
+      </button>
+    </form>
+  </div>
+{% endblock book_card_footer %}

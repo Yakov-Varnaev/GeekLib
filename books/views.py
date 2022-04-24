@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 
 from geeklib.service.paginator import paginate_queryset
@@ -21,12 +22,16 @@ class BookDetailView(DetailView):
         return context
 
 
-class PublisherView(DetailView):
-    model = PublishsingHouse
-    context_object_name = 'publishing_house'
+class PublisherView(ListView):
+    context_object_name = 'books'
     template_name = 'books/publisher.html'
+    paginate_by = 10
+
+    def get_queryset(self, **kwargs):
+        self.publisher = get_object_or_404(PublishsingHouse, id=self.kwargs.get('pk'))
+        return self.publisher.books.all()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['books'] = self.object.books.all()
+        context['publishing_house'] = self.publisher
         return context
