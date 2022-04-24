@@ -11,10 +11,9 @@ class ProfileView(ListView):
     paginate_by = 10
 
     def get_queryset(self, **kwargs):
-        self.profile = get_object_or_404(User, id=self.kwargs.get('pk'))
-        return self.profile.rents.all()
+        return self.request.user.rents.select_related()
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['profile'] = self.profile
+        context['profile'] = self.request.user
         return context

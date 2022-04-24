@@ -8,7 +8,7 @@ from .models import BookRent, LibraryBook
 
 
 class LibraryBookDetail(DetailView):
-    model = LibraryBook
+    queryset = LibraryBook.objects.select_related()
     context_object_name = 'library_book'
     template_name = 'libraries/book_detail.html'
 

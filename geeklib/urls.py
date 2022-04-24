@@ -8,4 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('books/', include('books.urls', 'books')),
     path('libraries/', include('libraries.urls', 'libraries')),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]

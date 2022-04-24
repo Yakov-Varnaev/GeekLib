@@ -7,14 +7,14 @@ from .models import Book, PublishsingHouse
 
 
 class BooksListView(ListView):
-    model = Book
+    queryset = Book.objects.select_related('publisher')
     context_object_name = 'books'
     template_name = 'books/index.html'
     paginate_by = 10
 
 
 class BookDetailView(DetailView):
-    model = Book
+    queryset = Book.objects.select_related('publisher')
     context_object_name = 'book'
     template_name = 'books/book_detail.html'
 
@@ -22,7 +22,7 @@ class BookDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['available_libraries'] = paginate_queryset(
             self.request,
-            self.object.available_libraries.all()
+            self.object.available_libraries.select_related()
         )
         return context
 
