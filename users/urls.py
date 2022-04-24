@@ -1,10 +1,9 @@
-from django.urls import include, path
 from django.contrib.auth.views import LoginView
+from django.urls import include, path
 from django.views.generic import CreateView
 
 from .forms import SignupForm
 from .views import ProfileView
-
 
 app_name = 'users'
 

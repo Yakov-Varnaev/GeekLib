@@ -1,8 +1,6 @@
-from readline import insert_text
-from urllib import request
-from django.shortcuts import get_object_or_404, redirect, render
+from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy
-from django.views.generic import DetailView, DeleteView
+from django.views.generic import DeleteView, DetailView
 
 from libraries.forms import RentForm
 
@@ -24,10 +22,10 @@ class LibraryBookDetail(DetailView):
 
     def post(self, request, pk, **kwargs):
         book = get_object_or_404(LibraryBook, id=pk)
-        form = RentForm(self.request.POST)
+        form = RentForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            instance.tenant = self.request.user
+            instance.tenant = request.user
             instance.book = book
             instance.save()
         return redirect(reverse('libraries:books-detail', args=[pk]))
