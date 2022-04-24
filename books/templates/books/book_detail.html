@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="center-wrapper container">
+    <div class="card bg-dark col-7">
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+          <h3 class="text-gradient">{{ book.name }}</h3>
+          <span class="text-muted mx-2">by {{ book.author }}</span>
+        </div>
+          <span class="text-muted">{{ book.publisher }}</span>
+      </div>
+
+      <div class="card-body row">
+        <div class="col-6">
+          <div class="">
+            {{ book.description }}
+          </div>
+        </div>
+        <div class="col-6 d-flex flex-column">
+          {% if available_libraries %}
+          <h4>
+            Available in:
+          </h4>
+          <ul class="list-group list-group-flush">
+            {% for lib_book in available_libraries %}
+            <li class="list-group-item bg-dark text-light d-flex align-items-center justify-content-between">
+              <span>{{ lib_book.library.name }}</span>
+              <a href={% url 'libraries:books-detail' lib_book.id %} class="text-gradient">
+                More
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="mt-auto">
+            {% include 'paginator.html' with is_paginated=True page_obj=available_libraries %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="card-footer row align-items-center">
+        <div class="col-6 align-self-start">
+          <button class="btn btn-secondary">
+            Back
+          </button>
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+          {% if not available_libraries %}
+            <span class="text-warning">This book is unavalable for rent.</span>
+          {% else %}
+            <span class="text-muted">This book is available in {{ available_libraries.paginator.count }} libraries.</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

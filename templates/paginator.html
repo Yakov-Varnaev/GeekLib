@@ -1,0 +1,11 @@
+{% if is_paginated %}
+<nav aria-label="" class="justify-content-center d-flex bg-dark">
+  <ul class="pagination bg-dark">
+    {% for i in page_obj.paginator.page_range %}
+      <li class="page-item disabled bg-dark">
+        <a class="page-link bg-dark border-dark {% if page_obj.number == i %}disabled{% endif %}" href="?page={{ i }}">1</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+{% endif %}

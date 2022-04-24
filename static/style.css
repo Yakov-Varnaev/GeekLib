@@ -3,6 +3,14 @@ body {
     font-family: 'Roboto';
 }
 
+.center-wrapper {
+    width: 100%;
+    height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .navbar-brand h3 {
     font-weight: 800;
 }

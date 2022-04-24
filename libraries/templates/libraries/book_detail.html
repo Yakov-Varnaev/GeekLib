@@ -1,0 +1,24 @@
+{% extends 'plate_layout.html' %}
+{% load user_filters %}
+
+{% block plate_content %}
+  <div class="">
+    {{ book.description }}
+  </div>
+{% endblock plate_content %}
+
+{% block footer_msg %}
+  {% if not is_rented %}
+    <form method="POST" class="align-items-center">
+      {% csrf_token %}
+      {% for field in form %}
+        {{ field|addclass:"border-0 rounded mx-2 bg-dark text-light" }}
+      {% endfor %}
+        <button type="submit" class="btn mx-auto bg-custom-gradient text-light">
+          Rent
+        </button>
+    </form>
+  {% else %}
+    <span class="text-warning">You've rented this book already!</span>
+  {% endif %}
+{% endblock footer_msg %}

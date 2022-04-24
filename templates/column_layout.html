@@ -2,20 +2,18 @@
 
 {% block content %}
 <div class="container">
-  <div class="row">
-    <aside class="col-lg-4">
-      <div class="">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
         {% block aside %}
         {% endblock aside %}
-      </div>
-    </aside>
-    <section class="col-lg-8">
+    </div>
+    <div class="col-md-6">
       {% block section_content %}
         {% for book in books %}
           {% include 'books/book_card.html' %}
         {% endfor %}
       {% endblock section_content %}
-    </section>
+    </div>
   </div>
 </div>
 {% endblock content %}

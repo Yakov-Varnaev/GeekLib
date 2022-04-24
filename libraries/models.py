@@ -31,7 +31,8 @@ class LibraryBook(models.Model):
     book = models.ForeignKey(
         'books.Book',
         on_delete=models.CASCADE,
-        verbose_name='Book'
+        verbose_name='Book',
+        related_name='available_libraries'
     )
     library = models.ForeignKey(
         Library,

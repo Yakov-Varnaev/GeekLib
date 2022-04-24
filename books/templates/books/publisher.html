@@ -1,8 +1,14 @@
 {% extends 'column_layout.html' %}
 
 {% block aside %}
-  <div class="card bg-dark mt-3 p-2">
-    <h3 class="text-gradient mb-0">{{ publishing_house }}</h3>
+  <div class="card bg-dark mt-3 p-2 px-3">
+    <div class="text-muted d-flex align-items-center justify-content-between">
+      <h3 class="text-gradient mb-0">{{ publishing_house }}</h3>
+      <span>{{ publishing_house.books.count }} books</span>
+    </div>
     <div class="text-muted">publishing house</div>
+    <div class="pt-2">
+      here is a brief description of Publishing House
+    </div>
   </div>
 {% endblock aside %}
