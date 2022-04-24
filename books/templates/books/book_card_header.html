@@ -1,0 +1,13 @@
+<div class="card-header d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center">
+    <h3 class="card-title text-gradient">
+      <a href={% url 'books:books-detail' book.id %}>
+        {{ book }}
+      </a>
+    </h3>
+    <span class="text-muted mx-2">by {{ book.author }}</span>
+  </div>
+  {% if not publishing_house %}
+    <a href={% url 'books:publishers-detail' book.publisher.id %} class="text-muted">{{ book.publisher }}</a>
+  {% endif%}
+</div>
