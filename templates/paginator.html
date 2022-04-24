@@ -1,11 +1,71 @@
 {% if is_paginated %}
-<nav aria-label="" class="justify-content-center d-flex bg-dark">
-  <ul class="pagination bg-dark">
-    {% for i in page_obj.paginator.page_range %}
-      <li class="page-item disabled bg-dark">
-        <a class="page-link bg-dark border-dark {% if page_obj.number == i %}disabled{% endif %}" href="?page={{ i }}">1</a>
-      </li>
-    {% endfor %}
-  </ul>
-</nav>
+  <nav class="paper" aria-label="product page navigation">
+    <ul class="pagination pagination-md-sm m-0 p-2">
+      {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link bg-dark border-dark text-light" href="?page={{ page_obj.previous_page_number }}">
+            &laquo;
+            <span class="d-none d-md-inline"></span>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link bg-dark border-dark" href="#" tabindex="-1" aria-disabled="True">
+            &laquo;
+            <span class="d-none d-md-inline"></span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if page_obj.number|add:'-2' > 1 %}
+        <li class="page-item">
+          <a class="page-link d-none d-sm-block bg-dark border-dark" href="?page=1">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link d-none d-sm-block bg-dark border-dark" href="?page={{ page_obj.number|add:'-3' }}">&hellip;</a>
+        </li>
+      {% endif %}
+
+      {% for i in page_obj.paginator.page_range %}
+        {% if page_obj.number == i %}
+          <li class="page-item active bg-dark border-dark" aria-current="page">
+            <span class="page-link bg-secondary border-secondary text-dark">
+              {{ i }}
+            </span>
+          </li>
+        {% elif i > page_obj.number|add:'-3' and i < page_obj.number|add:'3' %}
+          <li class="page-item">
+            <a class="page-link bg-dark border-dark text-light" href="?page={{ i }}">{{ i }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.paginator.num_pages > page_obj.number|add:'2' %}
+        <li class="page-item">
+          <a class="page-link d-none d-sm-block bg-dark border-dark" href="?page={{ page_obj.number|add:'3' }}">&hellip;</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link d-none d-sm-block bg-dark border-dark" href="?page={{ page_obj.paginator.num_pages}}">{{ page_obj.paginator.num_pages }}</a>
+        </li>
+      {% endif %}
+
+
+
+      {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link bg-dark border-dark text-light" href="?page={{ page_obj.next_page_number }}">
+            <span class="d-none d-md-inline"></span>
+            &raquo;
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <a class="page-link bg-dark border-dark" href="#" tabindex="-1" aria-disabled="True">
+            <span class="d-none d-md-inline"></span>
+            &raquo;
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
 {% endif %}

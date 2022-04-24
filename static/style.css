@@ -26,3 +26,7 @@ body {
     background: linear-gradient(245deg, #6100a4, #00d4ff);
     border-width: 0;
 }
+
+.transparent-background {
+    background: none;
+}

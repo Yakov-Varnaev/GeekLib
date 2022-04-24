@@ -1,3 +1,4 @@
+from django.db.models import Q, Exists
 from django.shortcuts import get_object_or_404
 from django.views.generic import DetailView, ListView
 
@@ -10,6 +11,7 @@ class BooksListView(ListView):
     model = Book
     context_object_name = 'books'
     template_name='books/index.html'
+    paginate_by = 10
 
 
 class BookDetailView(DetailView):
@@ -19,7 +21,10 @@ class BookDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['available_libraries'] = paginate_queryset(self.request, self.object.available_libraries.all())
+        context['available_libraries'] = paginate_queryset(
+            self.request,
+            self.object.available_libraries.all()
+        )
         return context
 
 

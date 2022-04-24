@@ -3,10 +3,8 @@
 {% block book_card_footer %}
   <div class="d-flex align-items-center justify-content-between">
     {{ rent.to_date }}
-    <form action={% url 'libraries:book-return' rent.id %} method="delete">
-      <button type="submit" class="btn btn-danger">
-        Return
-      </button>
-    </form>
+    <a class="btn btn-danger" href={% url 'libraries:book-return' rent.id %}>
+      Return
+    </a>
   </div>
 {% endblock book_card_footer %}

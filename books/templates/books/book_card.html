@@ -1,11 +1,6 @@
 <div class="card bg-dark mt-3">
-  <div class="card-header">
-    <a href={% url 'books:publishers-detail' pk=book.publisher.id %}>
-      {{ book.publisher }}
-    </a>
-  </div>
+  {% include 'books/book_card_header.html' %}
   <div class="card-body">
-    <h5 class="card-title">{{ book }}</h5>
     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
     {% block book_card_footer %}
       <a href="{{ book.get_absolute_url }}" class="btn btn-primary bg-custom-gradient border-0">More</a>

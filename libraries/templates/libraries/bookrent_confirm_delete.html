@@ -1,10 +1,17 @@
 {% extends 'plate_layout.html' %}
 
-{% block card_content %}
-  <form method="post">{% csrf_token %}
-    <p>Are you sure you want to return book "{{ object }}"?</p>
-    <button type="submit" class="btn bg-custom-gradient text-light">
-      Confirm
-    </button>
+{% block centralized_content %}
+  <form method="post">
+    {% csrf_token %}
+    <p class="m-0">Are you sure you want to return book "{{ object }}"?</p>
+    <p class="text-muted">Rent expiration date: {{ object.to_date }}</p>
+    <div class="d-flex justify-content-around">
+      <button type="submit" class="btn bg-custom-gradient text-light col-4">
+        Confirm
+      </button>
+      <a class="btn btn-secondary border-0 col-4" href={% url 'users:profile' user.id %}>
+        Back
+      </a>
+    </div>
   </form>
-{% endblock card_content %}
+{% endblock centralized_content %}
