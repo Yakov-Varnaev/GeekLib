@@ -8,7 +8,7 @@ from .views import ProfileView
 app_name = 'users'
 
 urlpatterns = [
-    path('profile/<int:pk>/', ProfileView.as_view(), name='profile'),
+    path('profile/', ProfileView.as_view(), name='profile'),
     path(
         'login/',
         LoginView.as_view(template_name='users/login.html'),

@@ -1,12 +1,14 @@
 from django.shortcuts import get_object_or_404, redirect
 from django.urls import reverse, reverse_lazy
 from django.views.generic import DeleteView, DetailView
-
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
 from libraries.forms import RentForm
 
 from .models import BookRent, LibraryBook
 
 
+@method_decorator(login_required, 'dispatch')
 class LibraryBookDetail(DetailView):
     queryset = LibraryBook.objects.select_related()
     context_object_name = 'library_book'

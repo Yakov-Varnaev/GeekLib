@@ -9,6 +9,10 @@ class PublishsingHouse(models.Model):
         db_table = 'publishing_houses'
 
     name = models.CharField('publising house name', max_length=255)
+    description = models.TextField(
+        'publishing house description',
+        max_length=200
+    )
 
     def __str__(self) -> str:
         return self.name
@@ -21,6 +25,9 @@ class Book(models.Model):
         db_table = 'books'
 
     name = models.CharField('book name', max_length=255)
+    short_description = models.TextField(
+        'book short description', max_length=200,
+    )
     description = models.TextField('book description')
     pub_date = models.DateField('Publishing Date')
     author = models.TextField('author`s name')
