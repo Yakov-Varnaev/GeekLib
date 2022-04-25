@@ -1,0 +1,426 @@
+- model: libraries.library
+  pk: 1
+  fields:
+    name: Oodi Central Library
+    address: Toolonlahdenkatu 4, Helsinki 00100 Finland
+- model: libraries.library
+  pk: 2
+  fields:
+    name: Seinajoki Library
+    address: Alvar Aallon katu 14, Seinajoki 60100 Finland
+- model: libraries.library
+  pk: 3
+  fields:
+    name: Oslo Public Library
+    address: Anne-Cath, Vestlys plass 1, 0150 Oslo
+- model: libraries.library
+  pk: 4
+  fields:
+    name: Stormen library
+    address: Storgata 1A, 8006 Bodø
+- model: libraries.library
+  pk: 5
+  fields:
+    name: Deichman Biblo Tøyen
+    address: Hagegata 22, 0653 Oslo
+- model: libraries.library
+  pk: 6
+  fields:
+    name: Cottbus Library
+    address: Brandenburg University of Technology Cottbus
+- model: libraries.librarybook
+  pk: 1
+  fields:
+    book: 1
+    library: 1
+    amount: 11
+- model: libraries.librarybook
+  pk: 2
+  fields:
+    book: 1
+    library: 2
+    amount: 5
+- model: libraries.librarybook
+  pk: 3
+  fields:
+    book: 1
+    library: 3
+    amount: 14
+- model: libraries.librarybook
+  pk: 4
+  fields:
+    book: 1
+    library: 4
+    amount: 13
+- model: libraries.librarybook
+  pk: 5
+  fields:
+    book: 1
+    library: 5
+    amount: 1
+- model: libraries.librarybook
+  pk: 6
+  fields:
+    book: 1
+    library: 6
+    amount: 18
+- model: libraries.librarybook
+  pk: 7
+  fields:
+    book: 2
+    library: 1
+    amount: 3
+- model: libraries.librarybook
+  pk: 8
+  fields:
+    book: 2
+    library: 2
+    amount: 18
+- model: libraries.librarybook
+  pk: 9
+  fields:
+    book: 2
+    library: 3
+    amount: 8
+- model: libraries.librarybook
+  pk: 10
+  fields:
+    book: 2
+    library: 4
+    amount: 11
+- model: libraries.librarybook
+  pk: 11
+  fields:
+    book: 2
+    library: 5
+    amount: 7
+- model: libraries.librarybook
+  pk: 12
+  fields:
+    book: 2
+    library: 6
+    amount: 5
+- model: libraries.librarybook
+  pk: 13
+  fields:
+    book: 3
+    library: 1
+    amount: 10
+- model: libraries.librarybook
+  pk: 14
+  fields:
+    book: 3
+    library: 2
+    amount: 12
+- model: libraries.librarybook
+  pk: 15
+  fields:
+    book: 3
+    library: 3
+    amount: 12
+- model: libraries.librarybook
+  pk: 16
+  fields:
+    book: 3
+    library: 4
+    amount: 10
+- model: libraries.librarybook
+  pk: 17
+  fields:
+    book: 3
+    library: 5
+    amount: 12
+- model: libraries.librarybook
+  pk: 18
+  fields:
+    book: 3
+    library: 6
+    amount: 6
+- model: libraries.librarybook
+  pk: 19
+  fields:
+    book: 4
+    library: 1
+    amount: 3
+- model: libraries.librarybook
+  pk: 20
+  fields:
+    book: 4
+    library: 2
+    amount: 1
+- model: libraries.librarybook
+  pk: 21
+  fields:
+    book: 4
+    library: 3
+    amount: 8
+- model: libraries.librarybook
+  pk: 22
+  fields:
+    book: 4
+    library: 4
+    amount: 7
+- model: libraries.librarybook
+  pk: 23
+  fields:
+    book: 4
+    library: 5
+    amount: 1
+- model: libraries.librarybook
+  pk: 24
+  fields:
+    book: 4
+    library: 6
+    amount: 2
+- model: libraries.librarybook
+  pk: 25
+  fields:
+    book: 5
+    library: 1
+    amount: 3
+- model: libraries.librarybook
+  pk: 26
+  fields:
+    book: 5
+    library: 2
+    amount: 16
+- model: libraries.librarybook
+  pk: 27
+  fields:
+    book: 5
+    library: 3
+    amount: 17
+- model: libraries.librarybook
+  pk: 28
+  fields:
+    book: 5
+    library: 4
+    amount: 11
+- model: libraries.librarybook
+  pk: 29
+  fields:
+    book: 5
+    library: 5
+    amount: 5
+- model: libraries.librarybook
+  pk: 30
+  fields:
+    book: 5
+    library: 6
+    amount: 4
+- model: libraries.librarybook
+  pk: 31
+  fields:
+    book: 6
+    library: 1
+    amount: 9
+- model: libraries.librarybook
+  pk: 32
+  fields:
+    book: 6
+    library: 2
+    amount: 16
+- model: libraries.librarybook
+  pk: 33
+  fields:
+    book: 6
+    library: 3
+    amount: 3
+- model: libraries.librarybook
+  pk: 34
+  fields:
+    book: 6
+    library: 4
+    amount: 16
+- model: libraries.librarybook
+  pk: 35
+  fields:
+    book: 6
+    library: 5
+    amount: 19
+- model: libraries.librarybook
+  pk: 36
+  fields:
+    book: 6
+    library: 6
+    amount: 9
+- model: libraries.librarybook
+  pk: 37
+  fields:
+    book: 7
+    library: 1
+    amount: 10
+- model: libraries.librarybook
+  pk: 38
+  fields:
+    book: 7
+    library: 2
+    amount: 1
+- model: libraries.librarybook
+  pk: 39
+  fields:
+    book: 7
+    library: 3
+    amount: 15
+- model: libraries.librarybook
+  pk: 40
+  fields:
+    book: 7
+    library: 4
+    amount: 15
+- model: libraries.librarybook
+  pk: 41
+  fields:
+    book: 7
+    library: 5
+    amount: 14
+- model: libraries.librarybook
+  pk: 42
+  fields:
+    book: 7
+    library: 6
+    amount: 15
+- model: libraries.librarybook
+  pk: 43
+  fields:
+    book: 8
+    library: 1
+    amount: 14
+- model: libraries.librarybook
+  pk: 44
+  fields:
+    book: 8
+    library: 2
+    amount: 15
+- model: libraries.librarybook
+  pk: 45
+  fields:
+    book: 8
+    library: 3
+    amount: 12
+- model: libraries.librarybook
+  pk: 46
+  fields:
+    book: 8
+    library: 4
+    amount: 16
+- model: libraries.librarybook
+  pk: 47
+  fields:
+    book: 8
+    library: 5
+    amount: 6
+- model: libraries.librarybook
+  pk: 48
+  fields:
+    book: 8
+    library: 6
+    amount: 3
+- model: libraries.librarybook
+  pk: 49
+  fields:
+    book: 9
+    library: 1
+    amount: 19
+- model: libraries.librarybook
+  pk: 50
+  fields:
+    book: 9
+    library: 2
+    amount: 12
+- model: libraries.librarybook
+  pk: 51
+  fields:
+    book: 9
+    library: 3
+    amount: 6
+- model: libraries.librarybook
+  pk: 52
+  fields:
+    book: 9
+    library: 4
+    amount: 1
+- model: libraries.librarybook
+  pk: 53
+  fields:
+    book: 9
+    library: 5
+    amount: 18
+- model: libraries.librarybook
+  pk: 54
+  fields:
+    book: 9
+    library: 6
+    amount: 19
+- model: libraries.librarybook
+  pk: 55
+  fields:
+    book: 10
+    library: 1
+    amount: 13
+- model: libraries.librarybook
+  pk: 56
+  fields:
+    book: 10
+    library: 2
+    amount: 19
+- model: libraries.librarybook
+  pk: 57
+  fields:
+    book: 10
+    library: 3
+    amount: 20
+- model: libraries.librarybook
+  pk: 58
+  fields:
+    book: 10
+    library: 4
+    amount: 16
+- model: libraries.librarybook
+  pk: 59
+  fields:
+    book: 10
+    library: 5
+    amount: 5
+- model: libraries.librarybook
+  pk: 60
+  fields:
+    book: 10
+    library: 6
+    amount: 9
+- model: libraries.librarybook
+  pk: 61
+  fields:
+    book: 11
+    library: 1
+    amount: 13
+- model: libraries.librarybook
+  pk: 62
+  fields:
+    book: 11
+    library: 2
+    amount: 15
+- model: libraries.librarybook
+  pk: 63
+  fields:
+    book: 11
+    library: 3
+    amount: 6
+- model: libraries.librarybook
+  pk: 64
+  fields:
+    book: 11
+    library: 4
+    amount: 4
+- model: libraries.librarybook
+  pk: 65
+  fields:
+    book: 11
+    library: 5
+    amount: 10
+- model: libraries.librarybook
+  pk: 66
+  fields:
+    book: 11
+    library: 6
+    amount: 5

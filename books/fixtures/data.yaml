@@ -1,0 +1,231 @@
+- model: books.publishsinghouse
+  pk: 1
+  fields:
+    name: Random House
+    description: Random House is an American book publisher and the largest general-interest
+      paperback publisher in the world. The company has several independently managed
+      subsidiaries around the world.
+- model: books.publishsinghouse
+  pk: 2
+  fields:
+    name: Bobbs-Merrill Company
+    description: The Bobbs-Merrill Company was a book publisher located in Indianapolis,
+      Indiana.
+- model: books.publishsinghouse
+  pk: 3
+  fields:
+    name: O'Reilly Media
+    description: O'Reilly Media (formerly O'Reilly & Associates) is an American learning
+      company established by Tim O'Reilly that publishes books, produces tech conferences,
+      and provides an online learning platform.
+- model: books.publishsinghouse
+  pk: 4
+  fields:
+    name: Manning Publications
+    description: Manning Publications is an American publisher established by Lee
+      Fitzpatrick and Marjan Bace that publishes books on computer technology topics,
+      with a particular focus on web development.
+- model: books.book
+  pk: 1
+  fields:
+    name: Atlas Shrugged
+    short_description: Atlas Shrugged is a 1957 novel by Ayn Rand. Her fourth and
+      final novel, it was also her longest, and the one she considered to be her magnum
+      opus in the realm of fiction writing.
+    description: Atlas Shrugged is a 1957 novel by Ayn Rand. Her fourth and final
+      novel, it was also her longest, and the one she considered to be her magnum
+      opus in the realm of fiction writing. Atlas Shrugged includes elements of science
+      fiction, mystery, and romance, and it contains Rand's most extensive statement
+      of Objectivism in any of her works of fiction. Rand described the theme of Atlas
+      Shrugged as "the role of man's mind in existence". The book explores a number
+      of philosophical themes from which Rand would subsequently develop Objectivism,
+      including reason, individualism, and capitalism, and depicts what Rand saw as
+      the failures of governmental coercion.
+    pub_date: 1957-10-10
+    author: Ayn Rand
+    publisher: 1
+- model: books.book
+  pk: 2
+  fields:
+    name: The Fountainhead
+    short_description: The Fountainhead is a 1943 novel by Russian-American author
+      Ayn Rand, her first major literary success.
+    description: The Fountainhead is a 1943 novel by Russian-American author Ayn Rand,
+      her first major literary success. The novel's protagonist, Howard Roark, is
+      an intransigent young architect, who battles against conventional standards
+      and refuses to compromise with an architectural establishment unwilling to accept
+      innovation. Roark embodies what Rand believed to be the ideal man, and his struggle
+      reflects Rand's belief that individualism is superior to collectivism.
+    pub_date: 1943-01-01
+    author: Ayn Rand
+    publisher: 2
+- model: books.book
+  pk: 3
+  fields:
+    name: Learning Python
+    short_description: Get a comprehensive, in-depth introduction to the core Python
+      language with this hands-on book.
+    description: "Get a comprehensive, in-depth introduction to the core Python language
+      with this hands-on book. Based on author Mark Lutz’s popular training course,
+      this updated fifth edition will help you quickly write efficient, high-quality
+      code with Python. It’s an ideal way to begin, whether you’re new to programming
+      or a professional developer versed in other languages.\r\n\r\nComplete with
+      quizzes, exercises, and helpful illustrations, this easy-to-follow, self-paced
+      tutorial gets you started with both Python 2.7 and 3.3— the latest releases
+      in the 3.X and 2.X lines—plus all other releases in common use today. You’ll
+      also learn some advanced language features that recently have become more common
+      in Python code."
+    pub_date: 2013-06-01
+    author: Mark Lutz
+    publisher: 3
+- model: books.book
+  pk: 4
+  fields:
+    name: TDD with Python
+    short_description: By taking you through the development of a real web application
+      from beginning to end, the second edition of this hands-on guide demonstrates
+      the practical advantages of test-driven development (TDD)
+    description: "By taking you through the development of a real web application
+      from beginning to end, the second edition of this hands-on guide demonstrates
+      the practical advantages of test-driven development (TDD) with Python. You’ll
+      learn how to write and run tests before building each part of your app, and
+      then develop the minimum amount of code required to pass those tests. The result?
+      Clean code that works.\r\n\r\nIn the process, you’ll learn the basics of Django,
+      Selenium, Git, jQuery, and Mock, along with current web development techniques.
+      If you’re ready to take your Python skills to the next level, this book—updated
+      for Python 3.6—clearly demonstrates how TDD encourages simple designs and inspires
+      confidence."
+    pub_date: 2017-08-01
+    author: Harry Percival
+    publisher: 3
+- model: books.book
+  pk: 5
+  fields:
+    name: Grokking Algorithms
+    short_description: Grokking Algorithms is a fully illustrated, friendly guide
+      that teaches you how to apply common algorithms to the practical problems you
+      face every day as a programmer.
+    description: "Grokking Algorithms is a fully illustrated, friendly guide that
+      teaches you how to apply common algorithms to the practical problems you face
+      every day as a programmer. You'll start with sorting and searching and, as you
+      build up your skills in thinking algorithmically, you'll tackle more complex
+      concerns such as data compression and artificial intelligence. Each carefully
+      presented example includes helpful diagrams and fully annotated code samples
+      in Python.\r\n\r\nLearning about algorithms doesn't have to be boring! Get a
+      sneak peek at the fun, illustrated, and friendly examples you'll find in Grokking
+      Algorithms on YouTube."
+    pub_date: 2016-05-01
+    author: Aditya Bhargava
+    publisher: 4
+- model: books.book
+  pk: 6
+  fields:
+    name: Fluent Python
+    short_description: Python’s simplicity lets you become productive quickly, but
+      this often means you aren’t using everything it has to offer.
+    description: "Python’s simplicity lets you become productive quickly, but this
+      often means you aren’t using everything it has to offer. With this hands-on
+      guide, you’ll learn how to write effective, idiomatic Python code by leveraging
+      its best—and possibly most neglected—features. Author Luciano Ramalho takes
+      you through Python’s core language features and libraries, and shows you how
+      to make your code shorter, faster, and more readable at the same time.\r\n\r\nMany
+      experienced programmers try to bend Python to fit patterns they learned from
+      other languages, and never discover Python features outside of their experience.
+      With this book, those Python programmers will thoroughly learn how to become
+      proficient in Python 3."
+    pub_date: 2015-08-01
+    author: Luciano Ramalho
+    publisher: 3
+- model: books.book
+  pk: 7
+  fields:
+    name: Python for Data Analysis
+    short_description: Python for Data Analysis is concerned with the nuts and bolts
+      of manipulating, processing, cleaning, and crunching data in Python.
+    description: "Python for Data Analysis is concerned with the nuts and bolts of
+      manipulating, processing, cleaning, and crunching data in Python. It is also
+      a practical, modern introduction to scientific computing in Python, tailored
+      for data-intensive applications. This is a book about the parts of the Python
+      language and libraries you’ll need to effectively solve a broad set of data
+      analysis problems. This book is not an exposition on analytical methods using
+      Python as the implementation language.\r\n\r\nWritten by Wes McKinney, the main
+      author of the pandas library, this hands-on book is packed with practical cases
+      studies. It’s ideal for analysts new to Python and for Python programmers new
+      to scientific computing."
+    pub_date: 2012-10-01
+    author: Wes McKinney
+    publisher: 3
+- model: books.book
+  pk: 8
+  fields:
+    name: 'Kafka: The Definitive Guide'
+    short_description: Every enterprise application creates data, whether it’s log
+      messages, metrics, user activity, outgoing messages, or something else.
+    description: "Every enterprise application creates data, whether it’s log messages,
+      metrics, user activity, outgoing messages, or something else. And how to move
+      all of this data becomes nearly as important as the data itself. If you’re an
+      application architect, developer, or production engineer new to Apache Kafka,
+      this practical guide shows you how to use this open source streaming platform
+      to handle real-time data feeds.\r\n\r\nEngineers from Confluent and LinkedIn
+      who are responsible for developing Kafka explain how to deploy production Kafka
+      clusters, write reliable event-driven microservices, and build scalable stream-processing
+      applications with this platform. Through detailed examples, you’ll learn Kafka’s
+      design principles, reliability guarantees, key APIs, and architecture details,
+      including the replication protocol, the controller, and the storage layer."
+    pub_date: 2017-09-01
+    author: Neha Narkhede
+    publisher: 3
+- model: books.book
+  pk: 9
+  fields:
+    name: Learning React
+    short_description: f you want to learn how to build efficient React applications,
+      this is your book.
+    description: "If you want to learn how to build efficient React applications,
+      this is your book. Ideal for web developers and software engineers who understand
+      how JavaScript, CSS, and HTML work in the browser, this updated edition provides
+      best practices and patterns for writing modern React code. No prior knowledge
+      of React or functional JavaScript is necessary.\r\n\r\nWith their learning road
+      map, authors Alex Banks and Eve Porcello show you how to create UIs that can
+      deftly display changes without page reloads on large-scale, data-driven websites.
+      You’ll also discover how to work with functional programming and the latest
+      ECMAScript features. Once you learn how to build React components with this
+      hands-on guide, you’ll understand just how useful React can be in your organization."
+    pub_date: 2020-06-01
+    author: Alex Banks
+    publisher: 3
+- model: books.book
+  pk: 10
+  fields:
+    name: 'JavaScript: The Definitive Guide'
+    short_description: JavaScript is the programming language of the web and is used
+      by more software developers today than any other programming language.
+    description: JavaScript is the programming language of the web and is used by
+      more software developers today than any other programming language. For nearly
+      25 years this best seller has been the go-to guide for JavaScript programmers.
+      The seventh edition is fully updated to cover the 2020 version of JavaScript,
+      and new chapters cover classes, modules, iterators, generators, Promises, async/await,
+      and metaprogramming. You’ll find illuminating and engaging example code throughout.
+    pub_date: 2020-05-01
+    author: David Flanagan
+    publisher: 3
+- model: books.book
+  pk: 11
+  fields:
+    name: Software Architecture
+    short_description: Salary surveys worldwide regularly place software architect
+      in the top 10 best jobs, yet no real guide exists to help developers become
+      architects.
+    description: "Salary surveys worldwide regularly place software architect in the
+      top 10 best jobs, yet no real guide exists to help developers become architects.
+      Until now. This book provides the first comprehensive overview of software architecture’s
+      many aspects. Aspiring and existing architects alike will examine architectural
+      characteristics, architectural patterns, component determination, diagramming
+      and presenting architecture, evolutionary architecture, and many other topics.\r\n\r\nMark
+      Richards and Neal Ford—hands-on practitioners who have taught software architecture
+      classes professionally for years—focus on architecture principles that apply
+      across all technology stacks. You’ll explore software architecture in a modern
+      light, taking into account all the innovations of the past decade."
+    pub_date: 2020-01-01
+    author: Mark Richards
+    publisher: 3
