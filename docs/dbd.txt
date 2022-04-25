@@ -1,0 +1,52 @@
+Table User {
+  id int pk
+  username str
+  first_name str
+  email str
+}
+
+Table Library {
+  id int pk
+  name str
+  address str
+}
+
+Table PublishingHouse {
+  id int pk
+  name str
+}
+
+Table Book {
+  id int pk
+  name str
+  author str
+  pub_date date
+  publisher int
+  description str
+  short_description str
+}
+
+Table LibraryBook {
+  id int
+  library int
+  book int
+  amount int
+}
+
+Table BookRent {
+  id int pk
+  user int
+  book int
+  to_date date
+}
+
+
+Ref: "LibraryBook"."library" < "Library"."id"
+
+Ref: "LibraryBook"."book" < "Book"."id"
+
+Ref: "Book"."publisher" < "PublishingHouse"."id"
+
+Ref: "BookRent"."user" < "User"."id"
+
+Ref: "BookRent"."book" < "LibraryBook"."id"
