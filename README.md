@@ -7,6 +7,13 @@
 - Sqlite3
 - Bootstrap
 
+# Полезные команды
+
+Загрузка данных в бд
+```
+python3 manage.py loaddata data.yaml
+```
+
 # Схема данных
 ![db architecture](./docs/GeekLib.png?raw=true)
 
