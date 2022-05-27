@@ -1,6 +1,10 @@
 # GeekLib
 Лучший сайт для библиотек, которые не застряли в прошлом веке!
 
+# DISCLAMER
+
+This website was build for [educational video on YouTube](https://www.youtube.com/watch?v=5mlWzkJieUI&t=1403s). 
+
 # Стек
 
 - Django
